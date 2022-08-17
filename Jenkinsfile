@@ -15,7 +15,10 @@ pipeline {
             steps {
                 echo 'Uploading files to s3'
                 sh '''
-                    docker run --rm -it -v ~/.aws:/ubuntu/.aws amazon/aws-cli --version
+                    // TODO: figure out how to run docker commands in a docker container
+                    // docker run --rm -it -v ~/.aws:/ubuntu/.aws amazon/aws-cli --version
+                    aws --version
+                    aws s3api list-buckets --query "Buckets[].Name"
                 '''
             }
         }
