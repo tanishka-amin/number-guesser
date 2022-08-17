@@ -9,7 +9,7 @@ pipeline {
         stage('Clone number-guesser repo') {
             steps {
                 echo 'Cloning number-guesser repo to local workspace'
-                git branch: 'master',
+                git branch: 'main',
                     credentialsId: 'git-access-token',
                     url: 'https://github.com/tanishka-amin/number-guesser.git'
             }
