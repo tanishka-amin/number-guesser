@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Cloning number-guesser repo to local workspace'
                 git branch: 'master',
-                    credentialsId: 'git-access-token'
+                    credentialsId: 'git-access-token',
                     url: 'https://github.com/jenkinsci/jenkins.git'
 
             }
