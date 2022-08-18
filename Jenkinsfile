@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    // TODO: add trigger for pollSCM
+    triggers { cron('H 20 * * *') }
     environment {
         access_key = credentials('aws-cli-access-token')
         secret_key = credentials('aws-cli-secret-key')
